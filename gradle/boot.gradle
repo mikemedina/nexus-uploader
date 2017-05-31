@@ -1,0 +1,9 @@
+apply plugin: 'org.springframework.boot'
+
+// inject properties in the gradle build into our application.yml configuration file
+processResources {
+    filesMatching( '**/application.yml' ) {
+        expand( project.properties )
+    }
+}
+

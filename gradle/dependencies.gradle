@@ -1,0 +1,18 @@
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile "org.jetbrains.kotlinx:kotlinx-html-jvm:${kotlinx_html_version}"
+
+    runtime "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonDatatypeJsr310Version"
+
+    testCompile 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:2.1.0"
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
+
+configurations.all {
+    resolutionStrategy {
+//         failOnVersionConflict()
+    }
+}
+

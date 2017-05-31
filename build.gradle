@@ -1,0 +1,32 @@
+buildscript {
+    ext.kotlin_version = '1.1.2-4'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url("https://dl.bintray.com/kotlin/kotlin-eap/")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+apply from: "$rootDir/gradle/boot.gradle"
+apply from: "$rootDir/gradle/dependencies.gradle"
+
+group 'com.github.mikemedina'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+}
+

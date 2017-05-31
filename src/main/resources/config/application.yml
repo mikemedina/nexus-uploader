@@ -1,0 +1,32 @@
+# customize /info endpoint -- placeholders will be populated by Gradle at build time
+info:
+  app:
+    name: ${name}
+    description: ${description}
+    version: ${version}
+
+endpoints:
+  shutdown:
+    enabled: true
+
+spring:
+  main:
+    banner-mode: console
+  jackson:
+    serialization:
+      indent_output: true
+      write_dates_as_timestamps: false
+
+server:
+  port: 8080
+  use-forward-headers: true
+
+logging:
+  level:
+    com:
+      github:
+        mikemedina: DEBUG
+  # inject custom MDC values before the 'level' attribute in the log message (suggested in Spring Boot docs)
+  # the trace-id is a looong UUID -- just use the last 5 characters for console output
+  pattern:
+    level: "%-5.5X{trace-id:------} %X{message-code:-----} %5p"

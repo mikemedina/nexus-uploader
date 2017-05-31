@@ -1,0 +1,28 @@
+body {
+    background: #111125;
+}
+
+.form-wrapper {
+    background: #EEEEFF;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 100px;
+    width: 25vw;
+    padding: 20px;
+}
+
+.form-wrapper h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.file-name {
+   text-align: center;
+   font-size: 28px;
+}
+
+.success-header {
+   color: green;
+   text-align: center;
+   font-size: 60px;
+}
