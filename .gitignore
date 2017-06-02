@@ -4,6 +4,6 @@ nb-gradle
 .idea/workspace.xml
 .nb-gradle/
 .idea/libraries/
-.idea/modules/elm.iml
+.idea/modules/
 .idea/modules.xml
 
